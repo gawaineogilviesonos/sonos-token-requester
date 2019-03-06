@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Create Auth Token{% endblock %}
+
+{% block body %}
+<div class="container">
+<!-- Content here -->
+  <div class="row">
+    <div class="col col-md">
+      <!--FORM STARTS HERE -->
+      <form action="" method="post" role="form">
+        {{ form.csrf_token }}
+        {{ form.hidden_tag() }}
+        <!--<div class="form-group">
+          <label for="client_id">Client ID</label>
+          <input type="text" class="form-control" id="client_id" name="client_id" aria-describedby="clientIdHelp" placeholder="">
+          <small id="clientIdHelp" class="form-text text-muted">Your Client ID is not stored in our app.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="redirect_uri">Redirect URI</label>
+          <input type="url" class="form-control" id="redirect_uri" name="redirect_uri" placeholder="https://example.com/callback">
+        </div>-->
+
+        <div class="form-group">
+          <label for="scope">Scope</label>
+          <input type="text" class="form-control" id="scope" value="playback-control-all" name="scope" placeholder="scope_test">
+        </div>
+
+        <div class="form-group">
+          <label for="response_type">Response Type</label>
+          <input type="text" value="code" class="form-control" id="response_type" name="response_type" placeholder="code">
+        </div>
+
+        <!--<div class="form-group">
+          <label for="state">State</label>
+          <input type="text" class="form-control" id="state" name="state" aria-describedby="stateHelp" placeholder="">
+          <small id="stateHelp" class="form-text text-muted">An opaque value used by the client to maintain state between the request and callback. We recommend that you randomly generate this and check it with the state value Sonos sends back in the response to make sure no cross site forgery happened. See the OAuth 2.0 RFC for details.</small>
+        </div>-->
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

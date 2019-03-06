@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Fetch My Token! #$!*{% endblock %}
+
+{% block body %}
+<div class="container text-center">
+<!-- Content here -->
+  <div class="row">
+    <div class="col col-sm">
+      <figure class="figure">
+        <a href="{{ url_for('get_auth_code') }}?service_name=sonos">
+        <img src="{{ url_for('static', filename='img_sonos.png') }}" class="figure-img img-fluid rounded" alt="...">
+        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+        </a>
+      </figure>
+    </div>
+    <div class="col-sm">
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='img_sonos.png') }}" class="figure-img img-fluid rounded" alt="...">
+        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+      </figure>
+    </div>
+    <div class="col col-sm">
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='img_sonos.png') }}" class="figure-img img-fluid rounded" alt="...">
+        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
