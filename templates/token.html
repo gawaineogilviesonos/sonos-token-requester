@@ -1,0 +1,57 @@
+<!doctype html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<title>Sonos Muse API Tokens</title>
+</head>
+
+
+{% if success %}
+  <h1>Success! Sonos Muse API Tokens Are Below:</h1>
+  <ol>
+    <li>Copy the <b><i>"Refresh Token"</i></b></li>
+    <li>Paste the <b><i>"Refresh Token"</i></b> into settings.py in the <i>REFRESH_TOKEN</i> variable</li>
+    <li>When you create a Sonos Client instance it should use the REFRESH_TOKEN you just copied and pasted to authenicate web API calls to Sonos Control API.</li>
+  </ol>
+  <div>
+    <table>
+      <tr>
+        <td>Access Token</td>
+        <td>{{success['access_token']}}</td>
+      </tr>
+      <tr>
+        <td>Refresh Token</td>
+        <td>{{success['refresh_token']}}</td>
+      </tr>
+      <tr>
+        <td>SonosAPI Access Scope</td>
+        <td>{{success['scope']}}</td>
+      </tr>
+      <tr>
+        <td>Token Type</td>
+        <td>{{success['token_type']}}</td>
+      </tr>
+      <tr>
+        <td>Expires In</td>
+        <td>{{success['expires_in']}}</td>
+      </tr>
+    </table>
+  </div>
+{% else %}
+  <h1>Nothing to see here. Try the main page:</h1> <a href="http://0.0.0.0:5000/">Index</a>
+{% endif %}
