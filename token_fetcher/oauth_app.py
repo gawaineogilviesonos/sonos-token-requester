@@ -10,7 +10,6 @@ token and a refresh token. Since the exchange uses your client secret key,
 you should make that request server-side to keep the integrity of the key.
 An advantage of this flow is that you can use refresh tokens to extend the
 validity of the access token.
-Source: https://developer.spotify.com/web-api/authorization-guide/#authorization-code-flow
 """
 
 # For Python 2 and 3 import compatibility
