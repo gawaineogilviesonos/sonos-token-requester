@@ -13,8 +13,13 @@ Source: https://developer.sonos.com/reference/authorization-api/
 4. Activate python virtual environment: `source venv/bin/activate`
 5. Install required libraries via PIP: `pip install -r requirements.txt`
 
-# Configure Token-requester to use your CLIENT ID & CLIENT SECRET
-1. Update `settings.py` with your client key and secret as well as extra configs to your liking (ex. REDIRECT_URI):
+# Configure token-requester for your Client
+1. Update `settings.py`
+2. You will need to update the follow to match your credentials in the integration portal:
+    - CLIENT ID
+    - CLIENT SECRET
+    - REDIRECT_URI
+    - SCOPE_STR
 ```
 # OAuth Credentials
 CLIENT_ID = "2330236c-0000-555c-cccb-ert449407d1e"
