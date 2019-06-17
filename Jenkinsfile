@@ -43,7 +43,7 @@ pipeline {
     stage ('Build Project') {
       steps {
         sh 'python --version'
-        build job: 'brandt-no-op-test-code'
+        sh 'virutalenv venv && source venv/bin/activate'
       }
     }
 
